@@ -21,10 +21,12 @@ import {
   XCircle,
 } from "lucide-react";
 import { LogoIcon } from "@/components/ui/logo-icon";
+import WaitlistDialog from "@/components/waitlist-dialog";
 
 export default function RiskLeagueLanding() {
   return (
     <main>
+      <WaitlistDialog/>
       {/* Hero Section */}
       <section className="hero-gradient py-20 md:py-32">
         <div className="container px-4 md:px-6">
@@ -46,36 +48,7 @@ export default function RiskLeagueLanding() {
                 </p>
               </div>
             </div>
-
-            {/* Waitlist Form */}
-            <div className="w-full max-w-md space-y-4">
-              <WaitlistForm size="lg" />
-              <p className="text-sm text-muted-foreground">
-                🔥 Join 10,000+ players already on the waitlist
-              </p>
-            </div>
-
-            {/* Hero Stats */}
-            <div className="grid grid-cols-3 gap-8 pt-8">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-primary">10K+</div>
-                <div className="text-sm text-muted-foreground">
-                  Players Waiting
-                </div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-primary">0$</div>
-                <div className="text-sm text-muted-foreground">
-                  Financial Risk
-                </div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-primary">∞</div>
-                <div className="text-sm text-muted-foreground">
-                  Skill Ceiling
-                </div>
-              </div>
-            </div>
+            <WaitlistForm size="lg" />
           </div>
         </div>
       </section>
