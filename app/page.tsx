@@ -25,10 +25,16 @@ import WaitlistDialog from "@/components/waitlist-dialog";
 
 export default function RiskLeagueLanding() {
   return (
-    <main>
-      <WaitlistDialog/>
+    <main className="min-h-screen bg-gradient-to-br from-background via-background/90 to-muted relative overflow-hidden">
+      {/* Subtle background decorations */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-20 right-20 w-72 h-72 bg-primary/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 left-20 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-primary/5 to-primary/10 rounded-full blur-3xl"></div>
+      </div>
+      <WaitlistDialog />
       {/* Hero Section */}
-      <section className="hero-gradient py-20 md:py-32">
+      <section className="py-20 md:py-32">
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center space-y-8 text-center">
             <Badge variant="secondary" className="px-4 py-2">
@@ -37,8 +43,8 @@ export default function RiskLeagueLanding() {
             <div className="flex flex-col gap-2 items-center">
               <LogoIcon className="h-12 w-12 text-primary" />
               <div className="space-y-4 max-w-4xl">
-                <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
-                  Play. <span className="gradient-text">Risk. </span>Win.
+                <h1 className="text-4xl font-extrabold tracking-tighter sm:text-5xl md:text-6xl lg:text-8xl">
+                  Play. <span className="text-primary">Risk. </span>Win.
                 </h1>
                 <p className="mx-auto max-w-[700px] text-muted-foreground text-lg md:text-xl">
                   Experience the thrill of competitive sports betting without
@@ -176,7 +182,7 @@ export default function RiskLeagueLanding() {
       </section>
 
       {/* Why Risk League Section */}
-      <section id="why-us" className="py-20 md:py-32 bg-muted/30">
+      <section id="why-us" className="py-20 md:py-32">
         <div className="container px-4 md:px-6">
           <div className="text-center space-y-4 mb-16">
             <Badge variant="outline" className="px-4 py-2">
@@ -251,9 +257,7 @@ export default function RiskLeagueLanding() {
               </div>
             </div>
 
-            <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-pink-400/20 rounded-3xl blur-3xl"></div>
-              <Card className="relative border-2 border-primary/20">
+              <Card>
                 <CardHeader className="text-center">
                   <CardTitle className="text-2xl">
                     Traditional Sports Betting vs Risk League
@@ -313,7 +317,6 @@ export default function RiskLeagueLanding() {
                   </div>
                 </CardContent>
               </Card>
-            </div>
           </div>
         </div>
       </section>
@@ -368,7 +371,7 @@ export default function RiskLeagueLanding() {
       </section>
 
       {/* Social Proof */}
-      <section className="py-20 md:py-32 bg-muted/30">
+      <section className="py-20 md:py-32">
         <div className="container px-4 md:px-6">
           <div className="text-center space-y-4 mb-16">
             <Badge variant="outline" className="px-4 py-2">

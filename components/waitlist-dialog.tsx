@@ -16,7 +16,7 @@ export default function WaitlistDialog() {
 
   return (
     <Dialog open={display} onOpenChange={setDisplay}>
-      <DialogContent className="max-w-md">
+      <DialogContent className="rounded-lg max-w-sm lg:max-w-md">
         <DialogHeader>
           <div className="flex flex-row items-center gap-2">
             <LogoIcon className="text-primary h-8 w-8"/>
